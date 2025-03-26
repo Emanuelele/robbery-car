@@ -1,10 +1,10 @@
-import Minigame from "./Minigame";
+import Minigame from './Minigame';
 
 const App = () => {
   return (
-    <>
+    <div>
       <Minigame />
-    </>
+    </div>
   );
 };
 

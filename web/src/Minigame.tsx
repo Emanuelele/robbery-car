@@ -40,6 +40,7 @@ const initialCableCutStates = {
 };
 
 const Minigame: React.FC = () => {
+  const [visible, setVisible] = useState(false);
   const [isPlierActive, setPlierActive] = useState(false);
   const [isDetectorActive, setIsDetectorActive] = useState(false);
   const [isCutting, setIsCutting] = useState(false);
@@ -140,6 +141,25 @@ const Minigame: React.FC = () => {
       console.log("Minigioco disattivato.");
     }
   };
+
+  useEffect(() => {
+    // Ascolta i messaggi in arrivo dalla NUI (inviati tramite SendNUIMessage)
+    const handleMessage = (event: { data: { action: string; }; }) => {
+      if (event.data && event.data.action) {
+        if (event.data.action === 'start') {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
 
   // Listen for messages from external (Lua) sources.
   useEffect(() => {
@@ -472,33 +492,35 @@ const Minigame: React.FC = () => {
 
   return (
     <>
-      <div className={styles.container}>
-        <Items
-          isPlierActive={isPlierActive}
-          isCutting={isCutting}
-          plierPosition={plierPosition}
-          setPlierActive={setPlierActive}
-          isDetectorActive={isDetectorActive}
-          setDetector={setDetector}
-          handlePlierClick={handlePlierClick}
-        />
+      <div style={{ display: visible ? 'block' : 'none' }}>
+        <div className={styles.container}>
+          <Items
+            isPlierActive={isPlierActive}
+            isCutting={isCutting}
+            plierPosition={plierPosition}
+            setPlierActive={setPlierActive}
+            isDetectorActive={isDetectorActive}
+            setDetector={setDetector}
+            handlePlierClick={handlePlierClick}
+          />
 
-        <Buttons
-          lightIn={lightIn}
-          lightOut={lightOut}
-          handleConnection={handleConnection}
-          finishButton={finishButton}
-          finishGame={finishGame}
-        />
+          <Buttons
+            lightIn={lightIn}
+            lightOut={lightOut}
+            handleConnection={handleConnection}
+            finishButton={finishButton}
+            finishGame={finishGame}
+          />
 
-        <CableGroup
-          cablesState={cablesState}
-          cableConnections={cableConnections}
-          handleCutCable={handleCutCable}
-          handleSelectCutCable={handleSelectCutCable}
-          isPlierActive={isPlierActive}
-          handleConnection={handleConnection}
-        />
+          <CableGroup
+            cablesState={cablesState}
+            cableConnections={cableConnections}
+            handleCutCable={handleCutCable}
+            handleSelectCutCable={handleSelectCutCable}
+            isPlierActive={isPlierActive}
+            handleConnection={handleConnection}
+          />
+        </div>
       </div>
     </>
   );

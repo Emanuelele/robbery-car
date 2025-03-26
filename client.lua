@@ -25,7 +25,7 @@ end)
 exports('startRobbery', function(damage, pins)
 
     SendNUIMessage({
-        start = true,
+        action = 'start'
     })
     SetNuiFocus(true, true)
     
@@ -39,7 +39,7 @@ exports('startRobbery', function(damage, pins)
         if LocalPlayer.state.dead then
             Promise:resolve(false)
             SendNUIMessage({
-                stop = true,
+                action = 'hide'
             })
             SetNuiFocus(false, false)
         end
@@ -54,4 +54,8 @@ exports('startRobbery', function(damage, pins)
     end
 
     return result
+end)
+
+RegisterCommand('tryrob', function()
+    exports['robbery-car']:startRobbery()
 end)
