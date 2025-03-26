@@ -1,0 +1,186 @@
+.cableLong {
+  cursor: pointer;
+  top: 483px;
+  position: absolute;
+}
+
+.cableLongBlue {
+  width: 110px;
+  left: 365px;
+  top: 440px;
+}
+
+.cableLongYellow {
+  width: 112px;
+  left: 425px;
+  top: 447px;
+}
+
+.cableLongGreen {
+  width: 95px;
+  left: 500px;
+  top: 454px;
+}
+
+.cableLongRed {
+  width: 82px;
+  left: 562px;
+  top: 452px;
+}
+.cableCut {
+  width: 45px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+}
+
+.cableCutBlue1 {
+  width: 37px;
+  top: 452px;
+  left: 386px;
+}
+
+.cableCutBlue2 {
+  width: 40px;
+  left: 415px;
+  top: 452px;
+}
+
+.cableCutYellow1 {
+  width: 44px;
+  top: 454px;
+  left: 441px;
+  z-index: 2;
+}
+
+.cableCutYellow2 {
+  width: 33px;
+  top: 487px;
+  left: 467px;
+}
+
+.cableCutGreen1 {
+  width: 40px;
+  top: 461px;
+  left: 504px;
+}
+
+.cableCutGreen2 {
+  width: 37px;
+  top: 454px;
+  left: 535px;
+}
+
+.cableCutRed1 {
+  width: 36px;
+  top: 453px;
+  left: 572px;
+}
+
+.cableCutRed2 {
+  width: 35px;
+  top: 453px;
+  left: 610px;
+}
+
+.cableIn,
+.cableOut {
+  position: absolute;
+  z-index: 1;
+}
+
+.cableInBlue1 {
+  width: 290px;
+  top: 452px;
+  left: 357px;
+}
+
+.cableOutBlue1 {
+  width: 790px;
+  top: 455px;
+  left: 400px;
+}
+
+.cableInBlue2 {
+  width: 265px;
+  top: 452px;
+  left: 382px;
+}
+
+.cableOutBlue2 {
+  width: 757px;
+  top: 450px;
+  left: 432px;
+}
+
+.cableInYellow1 {
+  width: 230px;
+  top: 452px;
+  left: 416px;
+}
+
+.cableOutYellow1 {
+  width: 740px;
+  top: 453px;
+  left: 459px;
+}
+
+.cableInYellow2 {
+  width: 214px;
+  top: 502px;
+  left: 434px;
+}
+
+.cableOutYellow2 {
+  width: 729px;
+  top: 503px;
+  left: 466px;
+}
+
+.cableInGreen1 {
+  width: 137px;
+  top: 468px;
+  left: 510px;
+}
+
+.cableOutGreen1 {
+  width: 676px;
+  top: 464px;
+  left: 521px;
+}
+
+.cableInGreen2 {
+  width: 125px;
+  top: 453px;
+  left: 522px;
+}
+
+.cableOutGreen2 {
+  width: 619px;
+  top: 455px;
+  left: 550px;
+}
+
+.cableInRed1 {
+  width: 97px;
+  top: 453px;
+  left: 551px;
+}
+
+.cableOutRed1 {
+  width: 619px;
+  top: 452px;
+  left: 578px;
+}
+
+.cableInRed2 {
+  width: 70px;
+  top: 451px;
+  left: 578px;
+}
+
+.cableOutRed2 {
+  width: 595px;
+  top: 452px;
+  left: 605px;
+}

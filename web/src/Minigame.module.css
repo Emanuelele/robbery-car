@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "gameplay";
+  src: url("./assets/fonts/Gameplay.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: "gameplay", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 1500px;
+  height: 97vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid transparent;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 109%;
+  background-position: center 1px;
+  position: relative;
+  background-image: url("./assets/img/base.png");
+}

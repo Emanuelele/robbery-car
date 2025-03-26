@@ -1,0 +1,62 @@
+.disabled {
+  cursor: not-allowed;
+}
+
+.plierZone {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 240px;
+  height: 80px;
+  background-color: rgba(127, 151, 153, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.fixedPlier {
+  position: relative;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+}
+
+.plier {
+  width: 150px;
+  z-index: 100;
+}
+
+.plierReturnText {
+  font-size: 12px;
+  text-align: center;
+}
+
+.voltageDetector {
+  width: 500px;
+  position: absolute;
+  top: 580px;
+  left: 630px;
+  z-index: 1;
+}
+
+.detectorZone {
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  width: 240px;
+  height: 80px;
+  background-color: rgba(127, 151, 153, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.voltageDetectorMini {
+  width: 170px;
+  height: auto;
+  position: relative;
+  cursor: pointer;
+}

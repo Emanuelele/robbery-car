@@ -1,0 +1,22 @@
+.containerInfo {
+  position: absolute;
+  top: 800px;
+  left: 20px;
+  padding: 10px;
+  width: 425px;
+  height: 87px;
+  background-color: rgba(127, 151, 153, 255);
+  border-radius: 10px;
+  align-items: center;
+}
+
+.p1,
+.p2 {
+  background-color: rgba(100, 120, 122, 255);
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.p1 {
+  margin-bottom: 5px;
+}

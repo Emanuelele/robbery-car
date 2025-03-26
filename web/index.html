@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robbery Car</title>
+  </head>
+  <body>
+    <script>
+      window.addEventListener(
+        "wheel",
+        function (event) {
+          if (event.ctrlKey) {
+            event.preventDefault();
+          }
+        },
+        { passive: false }
+      );
+
+      window.addEventListener("gesturestart", function (event) {
+        event.preventDefault();
+      });
+
+      window.addEventListener(
+        "touchmove",
+        function (event) {
+          if (event.scale !== 1) {
+            event.preventDefault();
+          }
+        },
+        { passive: false }
+      );
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
